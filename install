@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+#
+# (C) 2017 Kian Cross
+#
+
+vimrc=~/.vimrc
+
+if [ -e $vimrc ]; then
+  read -r -p "~/.vimrc already exists. Can it be overwritten? [y/N] " response
+  if echo "$response" | grep -iq "[^y]" ;then
+    echo "Aborting Install"
+    exit
+  fi
+fi
+
+echo "Creating ~/.vimrc..."
+echo "source ~/.vim/vimrc" > $vimrc
+
+echo "Downloading plugins..."
+git submodule update --init --recursive --remote
+
+echo "Installing syntax checkers..."
+npm install -g jshint
+
+echo "Finished!"
