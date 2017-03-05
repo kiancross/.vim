@@ -20,7 +20,4 @@ echo "source ~/.vim/vimrc" > $vimrc
 echo "Downloading plugins..."
 git submodule update --init --recursive --remote
 
-echo "Installing syntax checkers..."
-npm install -g jshint
-
 echo "Finished!"
