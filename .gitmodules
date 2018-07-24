@@ -23,5 +23,5 @@
 	path = bundle/vim-pug
 	url = git://github.com/digitaltoad/vim-pug.git
 [submodule "/Users/kiancross/.vim/bundle/typescript-vim"]
-	path = /Users/kiancross/.vim/bundle/typescript-vim
+	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
