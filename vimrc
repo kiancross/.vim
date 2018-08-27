@@ -12,8 +12,9 @@ set tabstop=2
 set shiftwidth=2
 set nu
 set ruler
+set ff=unix
 
-set spell spelllang=en_gb
+"set spell spelllang=en_gb
 
 " syntastic
 set statusline+=%#warningmsg#
