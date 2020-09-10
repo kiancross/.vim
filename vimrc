@@ -13,6 +13,7 @@ set shiftwidth=2
 set nu
 set ruler
 set ff=unix
+set wildmode=longest,list
 
 "set spell spelllang=en_gb
 
@@ -26,3 +27,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let b:syntastic_mode = "passive"
+let g:tex_flavor = "latex"
+
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif

@@ -22,6 +22,12 @@
 [submodule "bundle/vim-pug"]
 	path = bundle/vim-pug
 	url = git://github.com/digitaltoad/vim-pug.git
-[submodule "/Users/kiancross/.vim/bundle/typescript-vim"]
+[submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/elm-vim"]
+	path = bundle/elm-vim
+	url = https://github.com/elmcast/elm-vim
+[submodule "bundle/vimtex"]
+	path = bundle/vimtex
+	url = https://github.com/lervag/vimtex.git
