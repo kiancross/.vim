@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #
 # (C) 2017 Kian Cross
 #
@@ -16,8 +15,5 @@ fi
 
 echo "Creating ~/.vimrc..."
 echo "source ~/.vim/vimrc" > $vimrc
-
-echo "Downloading plugins..."
-git submodule update --init --recursive --remote
 
 echo "Finished!"
