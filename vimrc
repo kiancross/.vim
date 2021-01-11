@@ -11,6 +11,7 @@ Plug 'dracula/vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'raimondi/delimitmate'
 
 " Keep last
 Plug 'ryanoasis/vim-devicons'
