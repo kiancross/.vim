@@ -20,7 +20,7 @@ call plug#end()
 
 source ~/.vim/coc.nvim.vim
 
-let g:coc_global_extensions = ['coc-tsserver','coc-eslint','coc-stylelint','coc-json','coc-prettier', 'coc-yaml']
+let g:coc_global_extensions = ['coc-tsserver','coc-eslint','coc-stylelint','coc-json','coc-prettier', 'coc-yaml', 'coc-pyright']
 
 " Terminal
 " open new split panes to right and below
