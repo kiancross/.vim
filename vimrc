@@ -2,11 +2,18 @@
 " (C) 2020 Kian Cross
 "
 
+if executable("node") == 1
+    let g:use_coc_nvim = 1
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'HerringtonDarkholme/yats.vim'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+if exists("g:use_coc_nvim") && g:use_coc_nvim == 1
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
+
 Plug 'dracula/vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -18,9 +25,11 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
-source ~/.vim/coc.nvim.vim
+if exists("g:use_coc_nvim") && g:use_coc_nvim == 1
+    source ~/.vim/coc.nvim.vim
 
-let g:coc_global_extensions = ['coc-tsserver','coc-eslint','coc-stylelint','coc-json','coc-prettier', 'coc-yaml', 'coc-pyright']
+    let g:coc_global_extensions = ['coc-tsserver','coc-eslint','coc-stylelint','coc-json','coc-prettier', 'coc-yaml', 'coc-pyright']
+endif
 
 " Terminal
 " open new split panes to right and below
@@ -83,6 +92,7 @@ set nu
 set ruler
 set ff=unix
 set wildmode=longest,list
+set backspace=indent,eol,start
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
