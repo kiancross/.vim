@@ -97,6 +97,7 @@ set ruler
 set ff=unix
 set wildmode=longest,list
 set backspace=indent,eol,start
+set colorcolumn=80
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
