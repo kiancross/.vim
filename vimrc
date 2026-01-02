@@ -19,6 +19,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'raimondi/delimitmate'
+Plug 'digitaltoad/vim-pug'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'hashivim/vim-terraform'
 
 " Keep last
 Plug 'ryanoasis/vim-devicons'
@@ -28,7 +32,7 @@ call plug#end()
 if exists("g:use_coc_nvim") && g:use_coc_nvim == 1
     source ~/.vim/coc.nvim.vim
 
-    let g:coc_global_extensions = ['coc-tsserver','coc-eslint','coc-stylelint','coc-json','coc-prettier', 'coc-yaml', 'coc-pyright']
+    let g:coc_global_extensions = ['coc-tsserver','coc-eslint','coc-stylelint','coc-json','coc-prettier', 'coc-yaml', 'coc-pyright', 'coc-java']
 endif
 
 " Terminal
