@@ -99,6 +99,7 @@ set wildmode=longest,list
 set backspace=indent,eol,start
 set mouse=
 set colorcolumn=80
+set statusline=%l:%c\ %p%%
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
